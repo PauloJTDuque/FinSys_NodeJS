@@ -32,8 +32,16 @@ export class TransactionRepository {
 
     return this.transaction;
   }
-
+  
   list() {
     return this.transaction;
   }
+
+  deleteById(id) {
+    const index = this.transactions.findIndex((transaction) => transaction.id === id);
+  
+    this.transactions.splice(index, 1);
+  
+    return;
+  }  
 }
