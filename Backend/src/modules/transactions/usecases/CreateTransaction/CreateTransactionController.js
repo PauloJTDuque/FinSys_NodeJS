@@ -15,6 +15,7 @@ export class CreateTransactionController {
       categoria,
     });
 
+    response.statusCode = 201;
     return response.json(transaction);
   }
 }
