@@ -10,7 +10,7 @@ export class ListTransactionUseCase {
   async execute() {
     const transaction = await this.transactionRepository.list();
 
-    if (!transaction){
+    if (!transaction.length){
       throw new AppException(404, "Transactions not found!" )
     }
 
