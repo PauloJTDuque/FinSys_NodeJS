@@ -6,7 +6,7 @@ export class TransactionRepository {
   static INSTANCE;
 
   constructor() {
-    this.transaction = [];
+    this.transaction;
   }
 
   static getInstance() {
@@ -27,7 +27,7 @@ export class TransactionRepository {
       categoria,
       created_at: new Date(),
     });
-
+    this.transaction = [];
     this.transaction.push(this.transaction);
 
     return this.transaction;
