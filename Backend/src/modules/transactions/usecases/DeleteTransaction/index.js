@@ -1,5 +1,5 @@
 import { TransactionRepository } from "../../repositories/TransactionRepository";
-import { DeleteTrasactionUseCase } from "./DeleteTransactionUseCase.js";
+import { DeleteTransactionUseCase } from "./DeleteTransactionUseCase.js";
 import { DeleteTransactionController } from "./DeleteTransactionController.js";
 
 
