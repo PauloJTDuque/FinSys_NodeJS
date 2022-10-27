@@ -1,6 +1,6 @@
-import { AppException } from "../../../../application/errors/AppException";
+import { AppException } from "../../../../application/errors/AppException.js";
 
-import { TransactionRepository } from "../../repositories/TransactionRepository";
+import { TransactionRepository } from "../../repositories/TransactionRepository.js";
 
 export class DeleteTransactionUseCase {
     constructor() {

@@ -1,4 +1,4 @@
-import { DeleteTransactionUseCase } from "./DeleteTransactionUseCase";
+import { DeleteTransactionUseCase } from "./DeleteTransactionUseCase.js";
 
 
 export class DeleteTransactionController {
