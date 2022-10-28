@@ -8,10 +8,10 @@ datasource db {
 }
 
 model transactions {
-  id         String @id @default(auto()) @map("_id") @db.ObjectId
+  id         String   @id @default(auto()) @map("_id") @db.ObjectId
   categoria  String
-  created_at String
-  id_        String @map("id")
+  created_at DateTime @db.Date
+  id_        String   @map("id")
   tipo       String
   titulo     String
   valor      String

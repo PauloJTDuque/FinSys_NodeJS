@@ -27,6 +27,7 @@ export class TransactionRepository {
       categoria,
       created_at: new Date(),
     });
+    
     // this.transaction = [];
     this.transaction.push(this.transaction);
 

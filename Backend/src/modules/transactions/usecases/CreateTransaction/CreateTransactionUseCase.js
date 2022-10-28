@@ -1,18 +1,24 @@
-import { TransactionRepository } from "../../repositories/TransactionRepository.js";
+//import { TransactionRepository } from "../../repositories/TransactionRepository.js";
+import { prisma } from "../../../../database/prisma/PrismaCliente.js"
 
 export class CreateTransactionUseCase {
-  constructor() {
-    this.transactionRepository = TransactionRepository.getInstance();
-  }
+  // constructor() {
+  //   this.transactionRepository = TransactionRepository.getInstance();
+  // }
 
-  execute({ titulo, valor, tipo, categoria }) {
+  async execute({ titulo, valor, tipo, categoria }) {
 
-    const transaction = this.transactionRepository.create({
+    await prisma.$connect();
+
+    const transaction = await prisma.transactions.create({
       titulo,
       valor,
       tipo,
       categoria,
+      created_at: new Date(),
     });
+
+    await prisma.$disconnect();
 
     return transaction;
   }
