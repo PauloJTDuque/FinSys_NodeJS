@@ -20,7 +20,7 @@ export class TransactionRepository {
   create({ titulo, valor, tipo, categoria }) {
     const user = new Transaction();
 
-    Object.assign(this.transaction, {
+    Object.assign(transaction, {
       titulo,
       valor,
       tipo,
@@ -29,9 +29,9 @@ export class TransactionRepository {
     });
     
     // this.transaction = [];
-    this.transaction.push(this.transaction);
+    this.transaction.push(transaction);
 
-    return this.transaction;
+    return transaction;
   }
   
   list() {
