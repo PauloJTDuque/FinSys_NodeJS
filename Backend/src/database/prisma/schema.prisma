@@ -14,5 +14,5 @@ model transactions {
   id_        String   @map("id")
   tipo       String
   titulo     String
-  valor      String
+  valor      Float
 }

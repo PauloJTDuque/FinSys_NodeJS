@@ -12,7 +12,7 @@ export class CreateTransactionController {
       titulo,
       valor,
       tipo,
-      categoria,
+      categoria
     });
 
     response.statusCode = 201;
