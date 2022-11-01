@@ -14,7 +14,7 @@ export class ListTransactionUseCase {
 
       await prisma.$connect(); 
 
-      const transaction = await prisma.transaction.findMany();
+      const transaction = await prisma.transactions.findMany();
 
       if (!transaction.length){
         throw new AppException(404, "Transactions not found!" )

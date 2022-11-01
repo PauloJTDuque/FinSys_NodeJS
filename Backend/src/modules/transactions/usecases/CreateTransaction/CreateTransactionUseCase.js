@@ -11,11 +11,13 @@ export class CreateTransactionUseCase {
     await prisma.$connect();
 
     const transaction = await prisma.transactions.create({
-      titulo,
-      valor,
-      tipo,
-      categoria,
-      created_at: new Date(),
+      data: {
+        titulo,
+        valor,
+        tipo,
+        categoria,
+        created_at: new Date(),
+      },  
     });
 
     await prisma.$disconnect();
