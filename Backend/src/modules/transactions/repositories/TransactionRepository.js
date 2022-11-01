@@ -1,6 +1,6 @@
 import { Transaction } from "../models/Transaction.js";
 
-export class TransactionRepository {
+export class TransactionsRepository {
   transactions;
 
   static INSTANCE;
@@ -10,11 +10,11 @@ export class TransactionRepository {
   }
 
   static getInstance() {
-    if (!TransactionRepository.INSTANCE) {
-     TransactionRepository.INSTANCE = new TransactionRepository();
+    if (!TransactionsRepository.INSTANCE) {
+     TransactionsRepository.INSTANCE = new TransactionsRepository();
     }
 
-    return TransactionRepository.INSTANCE;
+    return TransactionsRepository.INSTANCE;
   }
 
   create({ titulo, valor, tipo, categoria }) {

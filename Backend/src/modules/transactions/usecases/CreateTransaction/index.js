@@ -1,8 +1,8 @@
-import { TransactionRepository } from "../../repositories/TransactionRepository.js";
+import { TransactionsRepository } from "../../repositories/TransactionRepository.js";
 import { CreateTransactionUseCase } from "./CreateTransactionUseCase.js";
 import { CreateTransactionController } from "./CreateTransactionController.js";
 
-const transactionRepository = TransactionRepository.getInstance();
+const transactionRepository = TransactionsRepository.getInstance();
 
 const createTransactionUseCase = new CreateTransactionUseCase(transactionRepository);
 
