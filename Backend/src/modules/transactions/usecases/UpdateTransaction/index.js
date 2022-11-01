@@ -1,4 +1,4 @@
-import { TransactionsRepository } from "../../repositories/TransactionsRepository.js";
+import { TransactionsRepository } from "../../repositories/TransactionRepository.js"
 import { UpdateTransactionUseCase } from "./UpdateTransactionUseCase.js";
 import { UpdateTransactionController } from "./UpdateTransactionController.js";
 

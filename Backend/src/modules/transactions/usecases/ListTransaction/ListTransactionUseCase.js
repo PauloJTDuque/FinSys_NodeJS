@@ -21,6 +21,7 @@ export class ListTransactionUseCase {
       }
 
       await prisma.$disconnect();
+      
       return transaction;
     }
 }

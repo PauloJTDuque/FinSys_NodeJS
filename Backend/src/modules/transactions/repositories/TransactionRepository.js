@@ -1,12 +1,12 @@
 import { Transaction } from "../models/Transaction.js";
 
 export class TransactionRepository {
-  transaction;
+  transactions;
 
   static INSTANCE;
 
   constructor() {
-    this.transaction = [];
+    this.transactions = [];
   }
 
   static getInstance() {
@@ -18,9 +18,9 @@ export class TransactionRepository {
   }
 
   create({ titulo, valor, tipo, categoria }) {
-    const user = new Transaction();
+    const transaction = new Transaction();
 
-    Object.assign(transaction, {
+    Object.assign(transactions, {
       titulo,
       valor,
       tipo,
@@ -29,13 +29,13 @@ export class TransactionRepository {
     });
     
     // this.transaction = [];
-    this.transaction.push(transaction);
+    this.transactions.push(transaction);
 
     return transaction;
   }
   
   list() {
-    return this.transaction;
+    return this.transactions;
   }
 
   deleteById(id) {
